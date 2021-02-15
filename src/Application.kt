@@ -12,15 +12,15 @@ import io.ktor.features.*
 import io.ktor.client.*
 import io.ktor.client.engine.jetty.*
 
-fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
+fun main(args: Array<String>) {
 
-@Suppress("unused") // Referenced in application.conf
-@kotlin.jvm.JvmOverloads
-fun Application.module(testing: Boolean = false) {
+
+    @Suppress("unused") // Referenced in application.conf
+    fun Application.module(testing: Boolean = false) {
 //    install(Locations) {
 //    }
 
-    install(CallLogging)
+        install(CallLogging)
 
 //    install(ContentNegotiation) {
 //        jackson {
@@ -31,10 +31,10 @@ fun Application.module(testing: Boolean = false) {
 //    val client = HttpClient(Jetty) {
 //    }
 
-    routing {
-        get("/") {
-            call.respondText("Mjello mjuhl!", contentType = ContentType.Text.Plain)
-        }
+        routing {
+            get("/") {
+                call.respondText("Mjello mjuhl!", contentType = ContentType.Text.Plain)
+            }
 
 //        get<MyLocation> {
 //            call.respondText("Location: name=${it.name}, arg1=${it.arg1}, arg2=${it.arg2}")
@@ -50,6 +50,7 @@ fun Application.module(testing: Boolean = false) {
 //        get("/json/jackson") {
 //            call.respond(mapOf("hello" to "world"))
 //        }
+        }
     }
 }
 
