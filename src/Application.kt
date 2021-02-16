@@ -22,7 +22,7 @@ fun Application.module(testing: Boolean = false) {
 
     routing {
         get("/") {
-            call.respondText("Mjello mjuhl!", contentType = ContentType.Text.Plain)
+            call.respondText("Mjello Din frække fyr!", contentType = ContentType.Text.Plain)
         }
     }
 }
