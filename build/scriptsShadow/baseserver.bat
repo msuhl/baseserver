@@ -63,7 +63,7 @@ set CMD_LINE_ARGS=%*
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\baseserver.jar
+set CLASSPATH=%APP_HOME%\lib\baseserver-0.0.3-all.jar
 
 @rem Execute baseserver
 "%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %BASESERVER_OPTS%  -jar "%CLASSPATH%" %CMD_LINE_ARGS%
