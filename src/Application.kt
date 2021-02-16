@@ -20,6 +20,10 @@ fun Application.module(testing: Boolean = false) {
 
     install(CallLogging)
 
+    install(CORS) {
+        anyHost()
+    }
+
     routing {
         get("/") {
             call.respondText("Mjello Din frække fyr!", contentType = ContentType.Text.Plain)
